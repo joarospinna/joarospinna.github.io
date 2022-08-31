@@ -1,4 +1,7 @@
 
+* {
+    font-family: "Ubuntu", sans-serif;
+}
 .container {
     height: 100vh;
 }
@@ -9,7 +12,7 @@
 .pokehead {
     display: flex;
     align-items: center;
-    background-color: gray;
+    background-color: #b33939;
     justify-content: center;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -59,11 +62,12 @@ h2 {
 
 }
 .m-footer_others {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     list-style: none;
+    width: 100%;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 .m-footer_items {
     background: lightgray;
@@ -81,8 +85,11 @@ h2 {
     height: 100%;
 }
 .o-footer {
+    background-color: #FFE898;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-evenly;
 }
 .a-footer-others {
@@ -109,7 +116,7 @@ h2 {
     padding: 5px;
     width: 100%;
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .main {
         flex-direction: row;
         padding: 15px;
@@ -128,5 +135,16 @@ h2 {
         align-items: center;
         flex-direction: column;
         width: 44%;
+    }
+    .m-footer_others {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;
+    }
+    .o-footer {
+
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
     }
 }
